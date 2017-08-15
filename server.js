@@ -17,8 +17,8 @@ var articles = {
     `
 },
  'article-two': {
-         title: 'shagufta',
-    date: 'aug 15, 2017',
+         title: 'shagu',
+    date: 'aug 18, 2017',
     content: `
     <h1>About</h1>
     <p>this is my first app this is my first app this is my first app</p>
