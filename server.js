@@ -13,7 +13,7 @@ var articleone = {
     <p>this is my first app this is my first app this is my first app</p>
     <p>this is my first app this is my first app this is my first app</p>
     <p>this is my first app this is my first app this is my first app</p>
-    '
+    `
 };
 
 function createTemplate (data){
@@ -21,7 +21,7 @@ function createTemplate (data){
     var date = data.date;
     var content = data.content;
     
-        var htmltemplate = '
+        var htmltemplate = `
         
         <html>
         <head>
@@ -37,14 +37,15 @@ function createTemplate (data){
         </div>
         </body>
         </html>
-        ';
+        `;
+        return htmltemplate;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function(req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+    res.send(createTemplate(articleone));
 });
 
 app.get('/article-two', function(req, res){
