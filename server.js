@@ -5,6 +5,17 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var content = {
+    title: 'shagufta',
+    date: 'aug 15, 2017',
+    content:`
+    <h1>About</h1>
+    <p>this is my first app this is my first app this is my first app</p>
+    <p>this is my first app this is my first app this is my first app</p>
+    <p>this is my first app this is my first app this is my first app</p>
+    '
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
